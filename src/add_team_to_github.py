@@ -59,6 +59,6 @@ self.teams = {team.name : team for team in self.org.teams()}
 # use invite function to invite team from csv file
 for username in team_members.username.values:
     try:
-        self.teams['students'].invite(username)
+        self.teams[team_name].invite(username)
     except:
         print(username, "failed to add to", team, "team")
